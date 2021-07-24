@@ -6,16 +6,19 @@ orbs:
 workflows:
   build-and-test:  
     jobs:
-      - run-test
+      - build
+      - test
 
 jobs:
-  run-test:  
+  build:  
     docker:
       - image: cimg/python:3.8
     steps:
       - checkout
       - python/install-packages:
           pkg-manager: pip
-      - run:
-          name: Run tests
-          command: pytest
+  test:
+    docker:
+      - image: cimg/python:3.8
+    steps:
+      - run: python3 test/test_ivp_4_ode.py test_one_var_equations.py
