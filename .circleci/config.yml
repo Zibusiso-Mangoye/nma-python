@@ -7,7 +7,6 @@ workflows:
   build-and-test:  
     jobs:
       - build
-      - test
 
 jobs:
   build:  
@@ -19,10 +18,6 @@ jobs:
           name : install python dependencies
           command : |
             pip install --user -r requirements.txt
-  test:
-    docker:
-      - image: cimg/python:3.8
-    steps:
       - run :
           name : run tests
           command : |
