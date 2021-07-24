@@ -11,6 +11,7 @@ workflows:
 
 jobs:
   build:  
+    working_directory: ~/circleci-nma-python
     docker:
       - image: cimg/python:3.8
     steps:
@@ -21,4 +22,4 @@ jobs:
     docker:
       - image: cimg/python:3.8
     steps:
-      - run: python3 test/test_ivp_4_ode.py test_one_var_equations.py
+      - run: python3 test/test_ivp_4_ode.py 
