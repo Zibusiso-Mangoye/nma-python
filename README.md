@@ -44,8 +44,8 @@ And you are good to go!
 
 | **Algorithm** | **Name (in 9<sup>th</sup> edition)** | **Name (in repository)**      | **File**                                                 | **Tests** | **Notebook**
 |:--------------|:-------------------------------------|:------------------------------|:---------------------------------------------------------|:----------|:------------|
-| 2.1           | Bisection                            | `bisection`                   | [`one_var_equations.py`][one_var_equations]           |       |     |
-| 5.1           | Euler's                              | `euler_method`                | [`ivp_4_ode.py`][ivp_4_ode]                              |       |     |
+| 2.1           | Bisection                            | `bisection`                   | [`one_var_equations.py`](ivp_4_ode.py)           |       |     |
+| 5.1           | Euler's                              | `euler_method`                | [`ivp_4_ode.py`](ivp_4_ode.py)                              |       |     |
 
 ### Acknowledgements
 
