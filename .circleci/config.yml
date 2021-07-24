@@ -11,15 +11,19 @@ workflows:
 
 jobs:
   build:  
-    working_directory: ~/circleci-nma-python
     docker:
       - image: cimg/python:3.8
     steps:
       - checkout
-      - python/install-packages:
-          pkg-manager: pip
+      - run :
+          name : install python dependencies
+          command : |
+            pip install --user -r requirements.txt
   test:
     docker:
       - image: cimg/python:3.8
     steps:
-      - run: python3 test/test_ivp_4_ode.py 
+      - run :
+          name : run tests
+          command : |
+            pytest test/
