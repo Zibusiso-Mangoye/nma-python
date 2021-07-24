@@ -28,16 +28,6 @@ cd nma-python
 pip install -r requirements.txt
 ```
 
-install `pytest`, so that you can run the test suite:
-
-```
-pip install pytest
-```
-
-Then to run the tests:
-
-`py.test`
-
 And you are good to go!
 
 ### Index of Algorithms
