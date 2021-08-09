@@ -1,11 +1,12 @@
 """
 Tests for ivp_4_ode.py
 """
-from ivp_4_ode import euler
+from nma.ivp_4_ode import euler, runge_kutta_o4
 
-def test_euler():
+
+def test_runge_kutta_o4():
     """
-    This test is Example 1 in chapter 5 of the textbook.
+    This test is Example 3 in chapter 5 of the textbook.
     """
-    f  = lambda y, t : y - t**2 + 1
-    assert euler(f, 0, 2, 10, 0.5) == 4.8657845 # @ t = 2
+    f = lambda t, y: y - t ** 2 + 1
+    assert runge_kutta_o4(f, 0, 2, 10, 0.5)[-1][1] == 5.305363000692653  # @ t = 2
