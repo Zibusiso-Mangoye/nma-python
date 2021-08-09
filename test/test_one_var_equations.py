@@ -1,7 +1,7 @@
 """
 Tests for one_var_equations.py
 """
-from one_var_equations import bisection
+from nma.one_var_equations import bisection
 
 def test_bisection():
     """
